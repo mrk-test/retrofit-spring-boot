@@ -16,16 +16,16 @@
 
 package com.mnazareno.retrofit.springboot;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
+import org.springframework.context.annotation.Configuration;
 import retrofit2.Converter;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
+@Configuration
 public class DefaultRetrofitClientConfiguration {
 
 	@Bean
